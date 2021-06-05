@@ -1,0 +1,260 @@
+*{
+    margin:0;
+    padding:0;
+}
+.main{
+    width:100vw;
+    height:100vh;
+    /* background-color:red; */
+}
+.container{
+    width:100%;
+    max-width:1024px;
+    height:100%;
+    max-width:1024px;
+    background:linear-gradient(left, hsla(0, 0%, 0%, 0.322), hsla(0, 0%, 0%, 0.473)), url('../images/background-home.jpg');
+    background: -webkit-linear-gradient(left, hsla(0, 0%, 0%, 0.473), hsla(0, 0%, 0%, 0.473)), url('../images/background-home.jpg');
+    background: -moz-linear-gradient(left, hsla(0, 0%, 0%, 0.473), hsla(0, 0%, 0%, 0.473)), url('../images/background-home.jpg');
+    background: -o-linear-gradient(left, hsla(0, 0%, 0%, 0.473), hsla(0, 0%, 0%, 0.473)), url('../images/background-home.jpg');
+    background-size: cover;
+
+}
+.container .header{
+    margin:0 auto;
+    width:97%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.header .logo-home{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-left:.5em;
+    background-color:crimson;
+    color:white;
+    text-decoration:none;
+    font-family:'FJalla One', sans-serif;
+    font-size:3em;
+}
+.header .buttons{
+    padding-right:2em;
+    cursor:pointer;
+}
+.header .header-option{
+    color:white;
+    text-decoration:none;
+    padding:.6em;
+    font-family:'Roboto',sans-serif;
+    font-size:1.3em;
+}
+.header .header-option:hover{
+    text-decoration:underline;
+}
+.container .section{
+    /* background-color: aqua; */
+    width:96%;
+    height:85%;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    color:white;
+    font-family:'Roboto',sans-serif;
+}
+.section h1{
+    margin:0 auto;
+    max-width:98%;
+    font-size:3em;
+    text-align:center;
+}
+.section p{
+    max-width:98%;
+    margin:0 auto;
+    font-size:2em;
+    text-align:center;
+}
+.overlay{
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background-color:hsla(0, 0%, 65%, 0.253);
+    visibility:hidden;
+    transition:.4s;
+    transition-timing-function:ease-in;
+}
+.overlay.active{
+    visibility:visible;
+}
+.modal{
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transform:translateY(-2000px);
+}
+.modal.login form{
+    width:280px;
+}
+.modal form{
+    overflow:hidden;
+    font-family:sans-serif;
+    background-color:white;
+    box-shadow:0 5px 12px 1px rgb(0 0 0 / 50%);
+    border-radius:.4em;
+}
+@keyframes modalIn{
+    0%{
+        transform:translateY(-2000px);
+    }
+    50%{
+        transform:translateY(10px);
+    }
+    75%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+@keyframes modalOut{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(10px);
+    }
+    75%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(2000px);
+    }
+}
+.modal .form-head{
+    padding:.9em;
+    background-color: white;
+    border-bottom:1px solid rgb(221, 221, 221);
+    position: relative;
+}
+.modal .form-head i::before{
+    content:'\f00d';
+    font-family:'Font Awesome 5 Free';
+    font-weight:bold;
+    font-style:normal;
+    position: absolute;
+    top:.3em;
+    right:.5em;
+    font-size:1.5em;
+    color:gray;
+}
+.modal .form-head h3{
+    font-size:2em;
+}
+.modal .form-head p{
+    font-size:1em;
+}
+.modal .data{
+    background-color: white;
+    padding:.9em;
+}
+.modal .data input{
+    padding:.8em;
+    border-radius:.5em;
+    outline:none;
+    margin:0 .3em .5em 0;
+    border:1px solid #ccd0d5;
+    background-color:#f5f6f7;
+}
+.modal .data input[name='correo']{
+    width:93%;
+}
+.modal .data input[name='password']{
+    width:93%;
+}
+.modal .data input:focus{
+    border:1px solid #026FFF;
+}
+.modal .data input::placeholder{
+    font-size:16px;
+}
+.modal .data .fecha{
+    font-size:.8em;
+    margin-top:.6em;
+    margin-bottom:.3em;
+}
+.modal .data .fecha-options{
+    display:flex;
+    justify-content:space-between;
+    padding-right:.2em;
+}
+.data .fecha-options select{
+    font-size:.9em;
+}
+.modal .data .option{
+    border-radius:.3em;
+    outline:none;
+    border:1px solid rgb(207, 205, 205);
+    width:31.2%;
+    padding:.6em .2em .6em;
+}
+.modal .data .sexo{
+    font-size:.8em;
+    margin:1em 0 .3em 0;
+}
+.modal .data .generos{
+    display:flex;
+    margin-bottom:.6em;
+}
+.modal .data .genero{
+    padding:.5em;
+    display:flex;
+    border-radius:.3em;
+    width:25%;
+    justify-content:space-between;
+    align-items:center;
+    margin-right:.5em;
+    border:1px solid rgb(207, 205, 205);
+}
+.data .submit{
+    font-family:'Roboto',sans-serif;
+    text-align:center;
+}
+.data .submit-login{
+    font-family:'Roboto',sans-serif;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+.data .submit input{
+    background-color:#00a400;
+    width:40%;
+    font-size:1em;
+    color:white;
+    outline:none;
+    border:1px solid #00a400;
+}
+.data .submit.login input{
+    width:55%;
+}
+.data .submit.login a{
+    color:#026FFF;
+    text-decoration:none;
+}
+.data .submit.login a:hover{
+    text-decoration:underline;
+}
+.data .submit input:focus{
+    border:1px solid #00a400;
+}
+.data .submit input:active{
+    transform:scale(.8);
+}
