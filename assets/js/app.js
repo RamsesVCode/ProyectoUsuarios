@@ -26,15 +26,15 @@ function hideModal($modal){
     $overlay.classList.remove('active');
     $modal.style.animation = 'modalOut .5s ease-out forwards';
 }
+if(document.querySelector('.alerta.error')){
+    showModal($modal);
+}
 //------------------------------------------------------------
 //VALIDACION DEL FORMULARIO-----------------------------------
 $nombre = document.getElementById('nombre');
 $apellidos = document.getElementById('apellidos');
 $email = document.getElementById('email');
 $password = document.getElementById('password');
-if(document.querySelector('.alerta-error')){
-    showModal($modal);
-}
 if(document.getElementById('Nombre no valido')){
     $nombre.style.border="1px solid red";
 }

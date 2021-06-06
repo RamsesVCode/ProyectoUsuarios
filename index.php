@@ -23,7 +23,7 @@
                 </div>
             </header>
             <?php if(isset($_SESSION['errores'])):?>
-                <div class="alerta-error"><span>Error al registrarse, intente nuevamente</span></div>
+                <div class="alerta error"><span>Error al registrarse, intente nuevamente</span></div>
             <?php endif;?>
             <?php if(isset($_SESSION['guarda'])):?> 
                 <div class="alerta exito">
