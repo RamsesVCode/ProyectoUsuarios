@@ -112,14 +112,17 @@
             </form>
         </div>
         <div class="modal login" id="modal-login">
-            <form action="">
+            <form action="login.php" method="POST">
                 <div class="form-head">
                     <h3>Iniciar Sesión</h3>
                     <i id="exit-login"></i>          
                 </div>
                 <div class="data">
-                    <input type="email" name="correo" placeholder="Correo electrónico" autocomplete="off"><br/>
-                    <input type="password" name="password" placeholder="Contraseña">
+                    <input type="email" name="correo" placeholder="Correo electrónico" autocomplete="off" id="correo-login"><br/>
+                    <?php echo isset($_SESSION['login']['email']) ? mostrarError($_SESSION['login']['email']) : '';?>
+                    <input type="password" name="password" placeholder="Contraseña" id="pass-login">
+                    <?php echo isset($_SESSION['login']['pass']) ? mostrarError($_SESSION['login']['pass']) : '';?>
+                    <?php echo isset($_SESSION['login']['valida']) ? mostrarError($_SESSION['login']['valida']) : '';?>
                     <div class="submit login">
                         <input type="submit" value="Iniciar Sesión"><br/>
                         <a href="">¿Olvidaste tu contraseña?</a>
