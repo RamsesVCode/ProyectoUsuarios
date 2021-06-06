@@ -19,6 +19,23 @@
     background-size: cover;
 
 }
+.alerta{
+    text-align:right;
+    padding-right:1.5em;
+    font-family:'Roboto';
+    font-weight:bold;
+}
+.alerta span{
+    padding:.5em;
+    color:white;
+    text-shadow:0 2px 14px rgb(238 255 255 / 80%);
+}
+.alerta.error span{
+    background-color:rgb(102, 16, 16);
+}
+.alerta.exito span{
+    background-color:rgb(3, 110, 47);
+}
 .container .header{
     margin:0 auto;
     width:97%;
