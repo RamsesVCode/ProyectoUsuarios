@@ -1,4 +1,3 @@
-<?php require_once 'includes/verify-sesion.php';?>
 <?php if(!isset($_SESSION)) session_start();?>
 <?php require_once 'includes/helpers.php';?>
 <!DOCTYPE html>
