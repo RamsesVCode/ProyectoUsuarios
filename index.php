@@ -17,8 +17,14 @@
             <header class="header">
                 <a href="index.php" class="logo-home">Demiko</a>
                 <div class="buttons">
-                    <span class="header-option" id="inicio">Iniciar</span>
-                    <span class="header-option" id="registro">Registrarse</span>
+                    <?php if(!isset($_SESSION['usuario'])):?>
+                        <span class="header-option" id="inicio">Iniciar</span>
+                        <span class="header-option" id="registro">Registrarse</span>
+                        <a href="home.php" class="header-option" id="inicio">Visitar el sitio</a>
+                    <?php else:?>
+                        <a href="home.php" class="header-option" id="inicio">I a Home</a>
+                        <a href="exit.php" class="header-option" id="registro">Cerrar sesión</a>
+                    <?php endif;?>
                 </div>
             </header>
             <?php if(isset($_SESSION['errores'])):?>
