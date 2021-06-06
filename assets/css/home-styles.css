@@ -4,7 +4,7 @@
 }
 .main{
     width:100%;
-    background-color:#f3f3f3;
+    background-color: rgb(237, 241, 239);
     display:grid;
     grid-template-areas:"header header"
                         "aside section";
@@ -18,6 +18,7 @@
     width:100%;
     box-sizing:border-box;
     padding-left:1em;
+    border-bottom:1px solid rgb(216, 216, 216);;
 }
 .header .header-logo{
     display:flex;
@@ -54,6 +55,7 @@
 .header .header-logo form button{
     border:none;
     cursor:pointer;
+    background-color:transparent;
 }
 .header .header-logo i::before{
     content:'\f002';
@@ -96,6 +98,30 @@
 }
 .main .aside{
     grid-area:aside;
+    /* background-color:red; */
+    padding-top:.8em;
+    font-family:'Open sans',sans-serif;
+}
+.aside .aside-title{
+    font-size:1.5em;
+    padding-left:1em;
+}
+.aside ul li{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:.8em 1em;
+    cursor:pointer;
+}
+.aside ul li .item-list i::before{
+    content:'\f105';
+    font-family:'Font Awesome 5 Free';
+    font-weight:bold;
+    color:black;
+    font-style:normal;
+}
+.aside ul li:hover .continente{
+    text-decoration:underline;
 }
 .main .section{
     grid-area:section;
