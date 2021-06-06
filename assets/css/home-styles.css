@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding:0;
+}
+.main{
+    width:100%;
+    background-color:#f3f3f3;
+    display:grid;
+    grid-template-areas:"header header"
+                        "aside section";
+    grid-template-columns:250px 1fr;
+}
+.main .header{
+    grid-area:header;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    box-sizing:border-box;
+    padding-left:1em;
+}
+.header .header-logo{
+    display:flex;
+    margin-left:.5em;
+    align-items:center;
+}
+.header .header-logo form{
+    display:flex;
+}
+.header .header-logo a{
+    display:flex;
+    align-items:center;
+    background-color:crimson;
+    color:white;
+    text-decoration:none;
+    font-family:'FJalla One', sans-serif;
+    font-size:3em;
+    margin-right:.5em;
+}
+.header .header-logo input{
+    padding:.6em;
+    width:100%;
+    border-radius:.6em;
+    outline:none;
+    border:1px solid rgb(187, 187, 187);   
+    margin-right:.5em;    
+}
+.header .header-logo input::placeholder{
+    font-size:1.2em;
+}
+.header .header-logo input:focus{
+    border:1px solid #026FFF;
+}
+.header .header-logo form button{
+    border:none;
+    cursor:pointer;
+}
+.header .header-logo i::before{
+    content:'\f002';
+    font-family:'Font Awesome 5 Free';
+    font-weight:bold;
+    color:black;
+    font-style:normal;
+    font-size:25px;
+}
+.header .usuario{
+    margin-right:2em;
+    display: flex;
+    align-items:center;
+}
+.header .usuario a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:#1B2127;
+}
+.header .usuario span{
+    font-family:'Open sans', sans-serif;
+    margin-right:.4em;
+}
+.header .usuario img{
+    border-radius:50%;
+    width:40px;
+    margin-right:.4em;
+}
+.header .usuario i::before{
+    content:'\f105';
+    font-family:'Font Awesome 5 Free';
+    font-weight:bold;
+    color:black;
+    font-style:normal;
+    display:inline-block;
+    transform:rotateZ(90deg);
+    cursor:pointer;
+}
+.main .aside{
+    grid-area:aside;
+}
+.main .section{
+    grid-area:section;
+}

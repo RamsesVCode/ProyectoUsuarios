@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <title>Demiko Pages</title>
 </head>
@@ -16,7 +15,7 @@
     <div class="main">
         <div class="container">
             <header class="header">
-                <a href="#" class="logo-home">Demiko</a>
+                <a href="index.php" class="logo-home">Demiko</a>
                 <div class="buttons">
                     <span class="header-option" id="inicio">Iniciar</span>
                     <span class="header-option" id="registro">Registrarse</span>
@@ -119,7 +118,7 @@
                     <i id="exit-login"></i>          
                 </div>
                 <div class="data">
-                    <input type="email" name="correo" placeholder="Numero de telefono o Correo electrónico" autocomplete="off"><br/>
+                    <input type="email" name="correo" placeholder="Correo electrónico" autocomplete="off"><br/>
                     <input type="password" name="password" placeholder="Contraseña">
                     <div class="submit login">
                         <input type="submit" value="Iniciar Sesión"><br/>

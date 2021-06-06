@@ -44,7 +44,7 @@
         if(count($errores)==0){
             //CODIFICAMOS LA CONTRASEÑA
             $password_segura = password_hash($password,PASSWORD_BCRYPT,['cost'=>4]);
-            $sql = "INSERT INTO usuarios VALUES(null,'$nombre','$apellidos','$correo','$password_segura','$fecha','$sexo',CURDATE());";
+            $sql = "INSERT INTO usuarios VALUES(null,'$nombre','$apellidos','$correo','$password_segura','$fecha','$sexo',CURDATE(),null);";
             $guarda = mysqli_query($db,$sql);
             if($guarda){
                 $_SESSION['guarda']='Registro exitoso';
