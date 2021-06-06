@@ -15,9 +15,12 @@
         <section class="section">
             <div class="section-container">
                 <h1 class="section-title">Ultimos destinos publicados</h1>
+                <?php $destinos = getDestinos($db);?>
+                <?php if($destinos!=''):?>
+                <?php while($destino = mysqli_fetch_assoc($destinos)): ?>
                 <article class="article">
                     <div class="item-destino">
-                        <a href="#" class="title-destino">Destino uno</a>
+                        <a href="#" class="title-destino"><?=$destino['NOMBRE'];?></a>
                         <div class="images-container">
                             <figure>
                                 <img src="assets/images/viaje1.jpg" alt="image-destino">
@@ -29,77 +32,11 @@
                                 <img src="assets/images/viaje1-1.jpg" alt="image-destino">
                             </figure>
                         </div>
-                        <p>Esta es la descripcion del destino uno, donde se mostrarán algunos datos importantes sobre el viaje que se esta ofreciendo.</p>
+                        <p><?php echo substr($destino['DESCRIPCION'],0,200).'...';?></p>
                     </div>
                 </article>
-                <article class="article">
-                    <div class="item-destino">
-                        <h2 class="title-destino">Destino uno</h2>
-                        <div class="images-container">
-                            <figure>
-                                <img src="assets/images/viaje1.jpg" alt="image-destino">
-                            </figure>
-                            <figure>
-                                <img src="assets/images/viaje1-2.jpg" alt="image-destino">
-                            </figure>
-                            <figure>
-                                <img src="assets/images/viaje1-1.jpg" alt="image-destino">
-                            </figure>
-                        </div>
-                        <p>Esta es la descripcion del destino uno, donde se mostrarán algunos datos importantes sobre el viaje que se esta ofreciendo.</p>
-                    </div>
-                </article>
-                <article class="article">
-                    <div class="item-destino">
-                        <h2 class="title-destino">Destino uno</h2>
-                        <div class="images-container">
-                            <figure>
-                                <img src="assets/images/viaje1.jpg" alt="image-destino">
-                            </figure>
-                            <figure>
-                                <img src="assets/images/viaje1-2.jpg" alt="image-destino">
-                            </figure>
-                            <figure>
-                                <img src="assets/images/viaje1-1.jpg" alt="image-destino">
-                            </figure>
-                        </div>
-                        <p>Esta es la descripcion del destino uno, donde se mostrarán algunos datos importantes sobre el viaje que se esta ofreciendo.</p>
-                    </div>
-                </article>
-                <article class="article">
-                    <div class="item-destino">
-                        <h2 class="title-destino">Destino uno</h2>
-                        <div class="images-container">
-                            <figure>
-                                <img src="assets/images/viaje1.jpg" alt="image-destino">
-                            </figure>
-                            <figure>
-                                <img src="assets/images/viaje1-2.jpg" alt="image-destino">
-                            </figure>
-                            <figure>
-                                <img src="assets/images/viaje1-1.jpg" alt="image-destino">
-                            </figure>
-                        </div>
-                        <p>Esta es la descripcion del destino uno, donde se mostrarán algunos datos importantes sobre el viaje que se esta ofreciendo.</p>
-                    </div>
-                </article>
-                <article class="article">
-                    <div class="item-destino">
-                        <h2 class="title-destino">Destino uno</h2>
-                        <div class="images-container">
-                            <figure>
-                                <img src="assets/images/viaje1.jpg" alt="image-destino">
-                            </figure>
-                            <figure>
-                                <img src="assets/images/viaje1-2.jpg" alt="image-destino">
-                            </figure>
-                            <figure>
-                                <img src="assets/images/viaje1-1.jpg" alt="image-destino">
-                            </figure>
-                        </div>
-                        <p>Esta es la descripcion del destino uno, donde se mostrarán algunos datos importantes sobre el viaje que se esta ofreciendo.</p>
-                    </div>
-                </article>
+                <?php endwhile;?>
+                <?php endif;?>
             </div>
         </section>
     </div>

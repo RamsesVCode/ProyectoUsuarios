@@ -16,6 +16,10 @@
             <img src="<?php echo $_SESSION['usuario']['FOTO'];?>" alt="user"/>
         </a>
         <i></i>
+        <?php else:?>
+            <a href="index.php">
+                <span>Volver al inicio</span>
+            </a>
         <?php endif;?>
     </div>
 </header>

@@ -44,11 +44,12 @@ ESTADO CHAR(255),
 DESCRIPCION CHAR(255)
 )ENGINE=INNODB;
 ALTER TABLE DESTINOS ADD COLUMN CUPOS INTEGER(255);
-ALTER TABLE USUARIOS MODIFY FOTO CHAR(255);
+ALTER TABLE USUARIOS MODIFY FOTO char(255) DEFAULT 'assets/images/images-user/user-profile.jpg';
 --INSERTANDO DATOS
-
-
-
+INSERT INTO DESTINOS VALUES(NULL,'JAPON',1,'DISPONIBLE','Para experimentar en una cultura diferente e interesante viaja a Japón. No sólo su historia es apasionante, sino también toda la cultura japonesa actual que poco tiene que ver con la nuestra. Déjate llevar por este maravilloso país.',200);
+INSERT INTO DESTINOS VALUES(NULL,'DINAMARCA',2,'DISPONIBLE','¿No quieres visitar el que ha sido durante varios años consecutivos el país más feliz del mundo (en 2017 le ha desbancado Noruega, tras cinco años ocupando el primer puesto)? Esta es la patria de la filosofía hygge, basada en disfrutar al máximo de los pequeños placeres de la vida. Los daneses te contagiarán su espíritu alegre y optimista.',200);
+INSERT INTO DESTINOS VALUES(NULL,'COSTA RICA',4,'DISPONIBLE','Pura vida, es el lema nacional de Costa Rica. Y tienen motivos para decirlo: su naturaleza supone el 5% de la biodiversidad del planeta. Así que disfrutarás viendo animales, plantas y unos bosques tropicales que serás incapaz de olvidar. Adéntrate en el corazón de Centroamérica y contágiate con la alegría y positividad de sus gentes.',200);
+INSERT INTO DESTINOS VALUES(NULL,'SUDÁFRICA',3,'DISPONIBLE','Sudáfrica es uno de los países más seguros del continente, aunque es verdad que esta disminuye ligeramente en su capital de Johannesburgo. Aun así, manteniendo las típicas normas de seguridad podrás disfrutar de tu viaje en solitario sin ningún problema.',200);
 --TABLA RESERVAS
 CREATE TABLE RESERVAS(
 ID INTEGER(255) PRIMARY KEY AUTO_INCREMENT,

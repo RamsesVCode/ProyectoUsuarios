@@ -24,4 +24,13 @@
             return '';
         }
     }
+    function getDestinos($db){
+        $sql = "SELECT * FROM DESTINOS";
+        $query = mysqli_query($db,$sql);
+        if($query && mysqli_num_rows($query)>0){
+            return $query;
+        }else{
+            return '';
+        }
+    }
 ?>
