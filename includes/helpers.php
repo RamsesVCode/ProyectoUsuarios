@@ -14,6 +14,14 @@
         $errorString = "<span id='$error'></span>";
         return $errorString;
     }
-
-
+    function getContinentes($db){
+        $sql = "SELECT * FROM CONTINENTE";
+        $query = mysqli_query($db,$sql);
+        if(mysqli_num_rows($query)>0){
+            return $query;
+        }
+        else{
+            return '';
+        }
+    }
 ?>
