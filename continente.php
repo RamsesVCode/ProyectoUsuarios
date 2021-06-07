@@ -14,8 +14,14 @@
         <?php require_once 'includes/aside.php';?>
         <section class="section">
             <div class="section-container">
-                <h1 class="section-title">Ultimos destinos publicados</h1>
-                <?php $destinos = getDestinos($db);?>
+                <?php if(isset($_GET['id'])):?>
+                <?php $destinos = getDestinos($db, $_GET['id'],null);?>
+                <?php $continente= getContinentes($db, $_GET['id']);?>
+                <?php $costos= getCostos($db);?>
+                <h1 class="section-title">Destinos disponibles en 
+                    <?php $cont = mysqli_fetch_assoc($continente);?>
+                    <?=$cont['NOMBRE'];?>
+                </h1>
                 <?php if($destinos!=''):?>
                 <?php while($destino = mysqli_fetch_assoc($destinos)): ?>
                 <article class="article">
@@ -36,6 +42,7 @@
                     </div>
                 </article>
                 <?php endwhile;?>
+                <?php endif;?>
                 <?php endif;?>
             </div>
         </section>

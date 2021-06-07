@@ -22,7 +22,7 @@
                         <span class="header-option" id="registro">Registrarse</span>
                         <a href="home.php" class="header-option" id="inicio">Visitar el sitio</a>
                     <?php else:?>
-                        <a href="home.php" class="header-option" id="inicio">I a Home</a>
+                        <a href="home.php" class="header-option" id="inicio">Ir a Home</a>
                         <a href="exit.php" class="header-option" id="registro">Cerrar sesión</a>
                     <?php endif;?>
                 </div>

@@ -182,3 +182,44 @@
     margin-top:.5em;
     max-width:95%;
 }
+.article .options{
+    background-color:white;
+    padding:.8em;
+    box-sizing:border-box;
+    border-radius:.5em;
+    margin:.8em 0;
+    font-weight:bold;
+    position: relative;
+}
+.article .options .item{
+    display:inline-block;
+    border-radius:.3em;
+    color:white;
+    cursor:pointer;
+    outline:none;
+    border:none;
+}
+.article .options h3 {
+    display:inline-block;
+}
+.article .options .exito{
+    position: absolute;
+    color:green;
+    right:.8em;
+    top:.8em;
+}
+.article .options .item.reserva{
+    padding:.8em;
+    background-color:green;
+}
+.article .options .item.borrar{
+    padding:.5em;
+    background-color:red;
+}
+.article .options .item:active{
+    transform:scale(.8);
+}
+.cantidad{
+    display:inline-block;
+    margin-bottom:.3em;
+}

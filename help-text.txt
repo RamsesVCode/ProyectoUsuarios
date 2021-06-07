@@ -45,6 +45,7 @@ DESCRIPCION CHAR(255)
 )ENGINE=INNODB;
 ALTER TABLE DESTINOS ADD COLUMN CUPOS INTEGER(255);
 ALTER TABLE USUARIOS MODIFY FOTO char(255) DEFAULT 'assets/images/images-user/user-profile.jpg';
+ALTER TABLE DESTINOS ADD COSTO NUMERIC(12,2);
 --INSERTANDO DATOS
 INSERT INTO DESTINOS VALUES(NULL,'JAPON',1,'DISPONIBLE','Para experimentar en una cultura diferente e interesante viaja a Japón. No sólo su historia es apasionante, sino también toda la cultura japonesa actual que poco tiene que ver con la nuestra. Déjate llevar por este maravilloso país.',200);
 INSERT INTO DESTINOS VALUES(NULL,'DINAMARCA',2,'DISPONIBLE','¿No quieres visitar el que ha sido durante varios años consecutivos el país más feliz del mundo (en 2017 le ha desbancado Noruega, tras cinco años ocupando el primer puesto)? Esta es la patria de la filosofía hygge, basada en disfrutar al máximo de los pequeños placeres de la vida. Los daneses te contagiarán su espíritu alegre y optimista.',200);
