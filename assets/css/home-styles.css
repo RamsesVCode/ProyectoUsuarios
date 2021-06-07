@@ -120,6 +120,11 @@
     font-weight:bold;
     color:black;
     font-style:normal;
+
+}
+.aside ul li .continente{
+    color:black;
+    text-decoration:none;
 }
 .aside ul li:hover .continente{
     text-decoration:underline;

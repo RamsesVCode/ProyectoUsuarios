@@ -24,8 +24,11 @@
             return '';
         }
     }
-    function getDestinos($db){
+    function getDestinos($db, $id=null){
         $sql = "SELECT * FROM DESTINOS";
+        if($id!=null){
+            $sql .= " WHERE CONTINENTE_ID = $id";
+        }
         $query = mysqli_query($db,$sql);
         if($query && mysqli_num_rows($query)>0){
             return $query;
