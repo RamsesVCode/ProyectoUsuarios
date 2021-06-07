@@ -1,6 +1,5 @@
 <?php 
-    require_once 'includes/verify-sesion.php';
-    if(isset($_GET['id'])){
+    if(isset($_SESSION['usuario']) && isset($_GET['id'])){
         if(!isset($_SESSION))
             session_start();
         require_once 'includes/conexion.php';
@@ -20,7 +19,7 @@
             $_SESSION['guarda'] = 'No se pudo eliminar la reserva';
         }
         header("Location:destino.php?id=$id_destino");
+    }else{
+        header("Location:index.php");
     }
-
 ?>
-UPDATE destinos SET CUPOS = CUPOS+1 WHERE PASAJE_ID=2

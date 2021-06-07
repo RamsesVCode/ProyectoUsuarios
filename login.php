@@ -21,7 +21,7 @@
                 $usuario = mysqli_fetch_assoc($query);
                 if(password_verify($password,$usuario['PASS'])){
                     $_SESSION['usuario'] = $usuario;
-                    header('Location:home.html');
+                    header('Location:home.php');
                 }else{
                     $login['valida'] = 'No se pudo validar el usuario';
                     $_SESSION['login'] = $login;
