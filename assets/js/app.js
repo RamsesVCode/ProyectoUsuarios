@@ -62,4 +62,3 @@ if(document.getElementById('El Password no es valido')){
 if(document.getElementById('No se pudo validar el usuario')){
     $pass_login.style.border="1px solid red";
 }
-//--------------------------------------------------------------

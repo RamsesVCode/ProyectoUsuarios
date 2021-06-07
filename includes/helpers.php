@@ -27,13 +27,16 @@
             return '';
         }
     }
-    function getDestinos($db, $id=null, $id_d=null){
+    function getDestinos($db, $id=null, $id_d=null,$busqueda=null){
         $sql = "SELECT * FROM DESTINOS";
         if($id!=null){
             $sql .= " WHERE CONTINENTE_ID = $id";
         }
         if($id_d!=null){
             $sql .= " WHERE ID = $id_d";
+        }
+        if($busqueda!=null){
+            $sql .= " WHERE NOMBRE LIKE '%".$busqueda."%'";
         }
         $query = mysqli_query($db,$sql);
         if($query && mysqli_num_rows($query)>0){

@@ -4,10 +4,10 @@
 <header class="header">
     <div class="header-logo">
         <a href="index.php" class="logo-home">DEMIKO</a>
-        <form action="#">
-            <input type="text" name="busqueda" placeholder="Buscar" autocomplete="off">
-            <button type="image"><i></i></button>
-        </form>
+        <!-- <form action="busqueda.php"> -->
+            <input oninput="buscar(this);" type="text" name="buscar" placeholder="Buscar" autocomplete="off">
+            <span><i></i></span>
+        <!-- </form> -->
     </div>
     <div class="usuario">
         <?php if(isset($_SESSION['usuario'])): ?>

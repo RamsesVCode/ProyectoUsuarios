@@ -13,7 +13,7 @@
         <?php require_once 'includes/header.php';?>
         <?php require_once 'includes/aside.php';?>
         <section class="section">
-            <div class="section-container">
+            <div class="section-container" id="section-container">
                 <h1 class="section-title">Ultimos destinos publicados</h1>
                 <?php $destinos = getDestinos($db);?>
                 <?php if($destinos!=''):?>
@@ -40,5 +40,6 @@
             </div>
         </section>
     </div>
+    <script src="assets/js/app-home.js"></script>
 </body>
 </html>

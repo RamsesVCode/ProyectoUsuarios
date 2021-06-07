@@ -52,10 +52,13 @@
 .header .header-logo input:focus{
     border:1px solid #026FFF;
 }
-.header .header-logo form button{
+.header .header-logo span{
     border:none;
     cursor:pointer;
     background-color:transparent;
+}
+.header .header-logo span:active{
+    transform:scale(.8);
 }
 .header .header-logo i::before{
     content:'\f002';
